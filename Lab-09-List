@@ -1,0 +1,20 @@
+print("########## Pecah-Pecah Uangmu ##########")
+print()
+uang=int(input("Masukkan Uang Total Belanjaanmu: "))
+uang_pecahan=[100000,50000,20000,10000,5000,2000,1000]
+jumlah_pecahan={}
+sisa=uang
+print("Uang total belanjaanmu {} Pecahan yang kamu btuhkan yaitu:".format(uang))
+print()
+for pecahan in uang_pecahan:
+    if sisa < pecahan:
+        continue
+    banyak_pecahan=int(sisa/pecahan)
+    sisa= sisa - (pecahan*banyak_pecahan)
+    print("Pecahan  {}:{}".format(pecahan,banyak_pecahan))
+print("Itu jumlah pecahan yang harus kamu bayarkan, cepat berikan uangnya ke kasir!!!")
+tanya=input("Apakah kamu sudah selesai menggunkan program ini?:")
+if tanya == ("ya"):
+    print("Baiklah Terimakasih sudah menggunkan program Pecah-Pecah Uang")
+else:
+    print("Okee mari kita pecah-pecah lagii!!!!")        
